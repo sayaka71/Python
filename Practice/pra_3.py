@@ -1,4 +1,5 @@
 # birth day of the week
+# 今日の曜日と日付を入力すると，誕生日の曜日を答えてくれるアルゴリズム
 
 # table
 year_day = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -13,9 +14,9 @@ day_now = 14
 youbi_now = "Mon"
 
 # birth
-year_birth =1997
-month_birth = 10
-day_birth = 17
+year_birth =1999
+month_birth = 7
+day_birth = 16
 
 total_days = 0
 for i in range(year_birth, year_now):

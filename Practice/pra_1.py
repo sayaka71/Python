@@ -1,7 +1,7 @@
 # practice class
 # URL: https://realpython.com/python3-object-oriented-programming/
 # 2021.06.03
-# @sayapy
+# Class，ローカル変数，グローバル変数，継承
 
 #-------------------------<Yadon Class>-------------------------#
 # Parent class
