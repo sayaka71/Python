@@ -1,0 +1,6 @@
+import sys
+print(sys.version)
+"""
+Build: Cmd + B
+Terminal: Cmd + Shift + P => terminal
+"""
