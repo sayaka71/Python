@@ -6,7 +6,7 @@
   </a>
   
 # Python
-Scripts for learning Python.
+Scripts for learning Python, Bash, etc.
 
 ## Table of Contents
 - [Code](#code)
