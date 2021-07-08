@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="./Scripts">
+  <a href="">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png" alt="Logo" width="150" height="150">
   </a>
   
@@ -14,7 +14,8 @@ Scripts for learning Python.
 - [Requirements](#requirements)
 
 ## Code
-- **pra_number.py**: アルゴリズム，独学プログラマーの演習
+### Practice
+- [**pra_num.py**](./Practice): アルゴリズム，独学プログラマーの演習
 
 
 ## bash
