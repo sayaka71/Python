@@ -47,3 +47,16 @@ t = (1,2,3)
 print(t[2])
 # t[2] = 10は不可能
 
+# for文
+names = ['井上', '小林', '佐藤', '山田']
+for name in names:
+    print('{}さん，こんにちは。'.format(name))
+
+# if文
+num = 4
+def hantei(num):
+    if num%2==0:
+        print('偶数です。')
+    elif num%2==1:
+        print('奇数です。')
+hantei(num)
