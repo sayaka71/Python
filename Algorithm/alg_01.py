@@ -60,3 +60,79 @@ def hantei(num):
     elif num%2==1:
         print('奇数です。')
 hantei(num)
+
+
+# 演習課題
+"""
+問題：
+    1万までの素数を表示するプログラムを書いてください
+発展：
+    スピードアップを図ってください
+"""
+
+def sosu(max):
+    """
+    素数：1とその数しか公約数を持たない数（1,2,3,5,7,11...）
+    アルゴリズム：地道に公約数を探して判定する
+    - num: 判定される数
+    - i: 割ってみるのに使うための数
+    - k: 公約数の個数
+    """
+    for num in range(1,max+1):
+        i = num
+        k = 0
+        while i>0 or k<2:
+            i -= 1
+
+            if i==0:
+                break
+
+            elif num%i==0:
+                k += 1
+
+        
+        if k==1:
+            print(num, k, i)
+
+# 時間
+import time
+
+# 処理前の時刻
+t1 = time.time()
+
+# 処理
+sosu(100)
+
+# 処理後の時刻
+t2 = time.time()
+ 
+# 経過時間を表示
+elapsed_time = t2-t1
+print(f"経過時間：{elapsed_time}")
+
+# 経過時間：0.0006620883941650391
+
+# 解答
+def gem_prime(max):
+    numbers = []
+    for i in range(1,max+1):
+        flag = True # 判定フラグ
+        for j in range(2,i):
+            if i%j==0:
+                flag = False
+        if flag:
+            numbers.append(i)
+    print(numbers)
+
+# 処理前の時刻
+t1 = time.time()
+
+# 処理
+gem_prime(100)
+
+# 処理後の時刻
+t2 = time.time()
+ 
+# 経過時間を表示
+elapsed_time = t2-t1
+print(f"経過時間：{elapsed_time}")
