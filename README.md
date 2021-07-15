@@ -29,8 +29,8 @@ Scripts for learning Python, Bash, etc.
 - `$rm`: ファイルとかディレクトリ (コマンドライン引数`-r`が必要）を消去 (remove) する
 - `$cp`: ファイルとかディレクトリ（コマンドライン引数`-r`が必要）コピーできる
 ```bash
-$cp piyo.txt yado.txt #ファイル
-$cp -r html new_html #ディレクトリ
+cp piyo.txt yado.txt #ファイル
+cp -r html new_html #ディレクトリ
 ```
 - `$ls -a`: `-a`がオプション。オプションついてる引数が`True`になる。
 - 絶対パス通すのは，[参考サイト](https://qiita.com/nbkn/items/01a11392921119fa0153)を参照で。
@@ -46,7 +46,7 @@ export PATH=$PATH:通したいPATH
 - `$git commit -m "message"`: commit
 - `$git push origin master`: リモートに反映
 - `$git pull origin master`: 変更をローカルに反映
-- `$git status`: 変更確認
+- `$git status` & `$git diff`: 変更確認
 
 ## Requirements
  packages in environment: 
