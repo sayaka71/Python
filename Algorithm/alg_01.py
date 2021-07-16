@@ -112,8 +112,8 @@ print(f"経過時間：{elapsed_time}")
 
 # 経過時間：0.0006620883941650391
 
-# 解答
-def gem_prime(max):
+# 解答1
+def gem_prime1(max):
     numbers = []
     for i in range(1,max+1):
         flag = True # 判定フラグ
@@ -128,11 +128,69 @@ def gem_prime(max):
 t1 = time.time()
 
 # 処理
-gem_prime(100)
+gem_prime1(1000)
 
 # 処理後の時刻
 t2 = time.time()
  
 # 経過時間を表示
 elapsed_time = t2-t1
-print(f"経過時間：{elapsed_time}")
+print(f"gem_prime1 経過時間：{elapsed_time}")
+
+
+# 高速化する
+# 一つでも割り切れていたらループから抜ける(break)
+# 解答2
+def gem_prime2(max):
+    numbers = []
+    for i in range(1,max+1):
+        flag = True # 判定フラグ
+        for j in range(2,i):
+            if i%j==0:
+                flag = False
+                break
+        if flag:
+            numbers.append(i)
+    print(numbers)
+
+# 処理前の時刻
+t1 = time.time()
+
+# 処理
+gem_prime2(1000)
+
+# 処理後の時刻
+t2 = time.time()
+ 
+# 経過時間を表示
+elapsed_time = t2-t1
+print(f"gem_prime2 経過時間：{elapsed_time}")
+
+# さらに高速化する
+# 2,3,4,5,6,7で順に割っていくのではなく，すでに持っている素数(numbers)で割っていく
+# 自分で考えれたので多分天才かも
+def gem_prime3(max):
+    numbers = [1]
+    for i in range(2,max+1):
+        flag = True # 判定フラグ
+        for j in numbers[1:len(numbers)+1]: 
+            if i%j==0:
+                flag = False
+                break
+        if flag:
+            numbers.append(i)
+
+    print(numbers)
+
+# 処理前の時刻
+t1 = time.time()
+
+# 処理
+gem_prime3(1000)
+
+# 処理後の時刻
+t2 = time.time()
+ 
+# 経過時間を表示
+elapsed_time = t2-t1
+print(f"gem_prime3 経過時間：{elapsed_time}")
