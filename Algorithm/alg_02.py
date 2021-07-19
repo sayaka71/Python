@@ -60,4 +60,9 @@ with open("input.txt") as f:
     text = f.read()
 print(len(text))
 # originalのファイルを情報が劣化しないように圧縮する
-
+# 圧縮を行う関数：text_encode
+# 復元を行う関数：text_decode
+text100 = text[:100]
+for _text in text100:
+    if _text == "1":
+        a += 1
