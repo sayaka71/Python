@@ -54,3 +54,10 @@ def add_lists(list_a, list_b):
 test_list2 = [1,2,3,4]
 test_list3 = [1,4,2]
 add_lists(test_list1, test_list3)
+
+# 圧縮のアルゴリズム
+with open("input.txt") as f:
+    text = f.read()
+print(len(text))
+# originalのファイルを情報が劣化しないように圧縮する
+
