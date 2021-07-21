@@ -62,7 +62,10 @@ print(len(text))
 # originalのファイルを情報が劣化しないように圧縮する
 # 圧縮を行う関数：text_encode
 # 復元を行う関数：text_decode
+
+# 10001 = 1[01] 0[03] 1[01]
 text100 = text[:100]
+
 for _text in text100:
     if _text == "1":
-        a += 1
+        num = _text
