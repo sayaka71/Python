@@ -63,14 +63,15 @@ with open("input.txt") as f:
 # 圧縮を行う関数：text_encode
 # 復元を行う関数：text_decode
 
-raw_text = text[:300]
-print(f'raw text: {raw_text}\n')
+raw_text = text
+# print(f'raw text: {raw_text}\n')
 
 # 圧縮を行う関数：text_encode
 def text_encode(text):
     """
     10001 = 1[01] 0[03] 1[01]という法則でエンコードする
     myfile.txtに書き込んで圧縮ファイル作成
+    （関数を機能毎にわけた方がわかりやすいかも...）
     """
     f = open('encode.txt', 'w')
     # first
@@ -122,6 +123,6 @@ text_decode(encode_text)
 
 with open("decode.txt") as f:
     decode_text = f.read()
-print(f'decode text: {decode_text}')
+# print(f'decode text: {decode_text}')
 
 print(raw_text == decode_text)
