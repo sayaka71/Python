@@ -107,14 +107,13 @@ print(f'encode text: {encode_text}')
 def text_decode(encode_text):
     f = open('decode.txt', 'w')
     idx_list = []
-    for i in range(len(encode_text)):
-        if i % 3 == 0:
+    for i in range(0, len(encode_text), 3):
+        # if i % 3 == 0:
             idx_list.append(int(encode_text[i]))
-        elif i % 3 == 1:
-            idx_list.append(int(encode_text[i:i+2]))
+        # elif i % 3 == 1:
+            idx_list.append(int(encode_text[i+1:i+3]))
 
-    for j in range(len(idx_list)):
-        if j % 2 == 0:
+    for j in range(0, len(idx_list), 2):
             f.write(str(idx_list[j])*idx_list[j+1])
 
     f.close()
@@ -126,3 +125,6 @@ with open("decode.txt") as f:
 # print(f'decode text: {decode_text}')
 
 print(raw_text == decode_text)
+if raw_text == decode_text:
+    print('Done!')
+    
