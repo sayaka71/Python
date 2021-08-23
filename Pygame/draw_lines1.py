@@ -33,6 +33,7 @@ def main():
 
         pointlist0, pointlist1 = [], []
 
+        # 星を描く。144度ずつまわすと星になる。
         for theta in range(0, 720, 144):
             rad = radians(theta)
             pointlist0.append((cos(rad)*100 + 100,sin(rad)*100 + 150))
